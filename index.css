@@ -214,11 +214,15 @@ input[type="text"] {
   }
   #popup img{
     max-width: 100%; 
-  height: auto;
+    height: auto;
   }
   .sidebar {
-    width: 250px; 
+    width: 100vw; 
     left: 0; 
+    z-index: 1000;
+    transform: translate(-100vw, 0);
+    transition-duration: 0.3s;
+    height: calc(100vh-300px);
   }
   .movie-list{
     position: absolute;

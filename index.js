@@ -195,10 +195,10 @@ function animation() {
   }
 }
 const menuIcon = document.getElementById("menu-icon");
-const sidebar = document.getElementById("movie-list");
-console.log(menuIcon);
-console.log(sidebar)
-
+const sidebar = document.getElementById("sidebar");
+let state = false;
 menuIcon.addEventListener("click", () => {
-  sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+  console.log(sidebar);
+  sidebar.style.transform = state ?  "translate(-100vw,0)": "translate(0,0)";
+  state = !state;
 });
