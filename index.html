@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>Movie Landing Page</title>
 </head>
+
 <body>
-    hi
-    hello
+  <header class="header">
+    <div class="container">
+      <a href="index.html" style="color: white; text-decoration: none;"><h1 class="logo">My Movie App</h1></a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for movies" id="input">
+        <button id="button" onclick="search()">Search</button>
+        <a href="index.html"><button id="remove-btn"class="view-btn" onclick="removeSearch()" disabled>Remove Search Filter</button></a>
+      </div>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <aside class="sidebar" id="sidebar">
+      <h2>Categories</h2>
+      <ul class="category-list" id="side-options">
+        <li onclick="action()"><a>Action</a></li>
+        <li onclick="adventure()"><a>Adventure</a></li>
+        <li onclick="comedy()"><a>Comedy</a></li>
+        <li onclick="drama()"><a>Drama</a></li>
+        <li onclick="animation()"><a>Animation</a></li>
+        <!-- Add more categories here -->
+      </ul>
+      <a href="index.html"><button class="view-btn">Clear Filter</button></a>
+    </aside>
+
+    <section class="movie-list">
+      <!-- Add more movie cards here -->
+    </section>
+    <div id="search" style="display: none;"></div>
+    <div id="action" style="display: none;"></div>
+    <div id="adventure" style="display: none;"></div>
+    <div id="comedy" style="display: none;"></div>
+    <div id="drama" style="display: none;"></div>
+    <div id="animation" style="display: none;"></div>
+  </main>
+  <div id="popup">
+    <h2></h2>
+    <img>
+    <p></p>
+    <a href="checkoutform.html"><button class="book-now">Book Now</button></a>
+    <button class="cross" onclick="close_popup()">Closes</button>
+  </div>
+  <!-- <div id="content-container"></div> -->
 </body>
 </html>

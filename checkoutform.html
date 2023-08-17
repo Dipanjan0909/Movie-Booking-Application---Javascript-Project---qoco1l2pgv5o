@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./checkoutform.css">
+  <script src="checkoutform.js"defer></script>
+  <title>Checkout Form</title>
+</head>
+<body>
+  <div class="checkout-container">
+    <div class="checkout-form">
+      <h2>Checkout</h2>
+      <form id="userForm" class="user-form">
+        <h3>User Information</h3>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <h3>Payment Information</h3>
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" required>
+        </div>
+        <button type="submit" class="submit-button">Place Order</button>
+      </form>
+    </div>
+    <div class="summary">
+      <h2>Summary</h2>
+      <div class="summary-item">
+        <span class="summary-label" >Ticket Price:</span>
+        <span class="summary-value" id="price" >0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Number of Tickets:</span>
+        <input class="summary-value" type="number" id="noOfTickets"/>
+        <button id="submit" class="button">Add</button>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Total Price: (GST-18%)</span>
+        <span class="summary-value" id="total">0</span>
+      </div>
+      <a href="index.html" ><button class="button">Back To Home</button></a>
+    </div>
+  </div>
+</body>
+</html>
