@@ -135,22 +135,11 @@ function regularJob(div) {
   div.classList.add("movie-list");
 }
 
-let actionDiv = document.querySelector("#action");
-function action() {
-  regularJob(actionDiv);
-  let ID = getMyId("action");
-  for (let i = 0; i < movieArr.length; i++) {
-    if (movieArr[i].genre_ids.indexOf(ID) >= 0) {
-      let div = dry(movieArr, i);
-      actionDiv.appendChild(div);
-    }
-  }
-}
 
-let adventureDiv = document.querySelector("#adventure");
-function adventure() {
+function handleAllFilter(str) {
+  let adventureDiv = document.querySelector(`#${str}`);
   regularJob(adventureDiv);
-  let ID = getMyId("adventure");
+  let ID = getMyId(`${str}`);
   for (let i = 0; i < movieArr.length; i++) {
     if (movieArr[i].genre_ids.indexOf(ID) >= 0) {
       let div = dry(movieArr, i);
@@ -159,41 +148,7 @@ function adventure() {
   }
 }
 
-let comedyDiv = document.querySelector("#comedy");
-function comedy() {
-  regularJob(comedyDiv);
-  let ID = getMyId("comedy");
-  for (let i = 0; i < movieArr.length; i++) {
-    if (movieArr[i].genre_ids.indexOf(ID) >= 0) {
-      let div = dry(movieArr, i);
-      comedyDiv.appendChild(div);
-    }
-  }
-}
 
-let dramaDiv = document.querySelector("#drama");
-function drama() {
-  regularJob(dramaDiv);
-  let ID = getMyId("drama");
-  for (let i = 0; i < movieArr.length; i++) {
-    if (movieArr[i].genre_ids.indexOf(ID) >= 0) {
-      let div = dry(movieArr, i);
-      dramaDiv.appendChild(div);
-    }
-  }
-}
-
-let animationDiv = document.querySelector("#animation");
-function animation() {
-  regularJob(animationDiv);
-  let ID = getMyId("animation");
-  for (let i = 0; i < movieArr.length; i++) {
-    if (movieArr[i].genre_ids.indexOf(ID) >= 0) {
-      let div = dry(movieArr, i);
-      animationDiv.appendChild(div);
-    }
-  }
-}
 const menuIcon = document.getElementById("menu-icon");
 const sidebar = document.getElementById("sidebar");
 let state = false;
